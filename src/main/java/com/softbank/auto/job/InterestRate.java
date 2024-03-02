@@ -22,7 +22,7 @@ public class InterestRate {
 
     private final BigDecimal INTEREST_RATE = BigDecimal.valueOf(0.05);
 
-    @Scheduled(fixedDelay = 180000)
+    @Scheduled(cron = "0 0 15 * * ?")
     public void calculateInterestRate() {
         List<Account> accounts = accountRepository.findAll();
 
